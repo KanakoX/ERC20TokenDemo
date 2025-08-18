@@ -1,3 +1,4 @@
+require('./packages/node_modules/dotenv').config();
 module.exports = {
   networks: {
     mainnet: {

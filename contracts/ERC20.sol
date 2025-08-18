@@ -18,6 +18,9 @@ contract ERC20 is IERC20 {
         decimals = _decimals;
     }
 
+    function test() public view returns (address) {
+        return msg.sender;
+    }
 
     // 转账功能
     function transfer(address recipient, uint256 amount) external override returns (bool) {
