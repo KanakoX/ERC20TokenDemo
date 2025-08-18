@@ -1,82 +1,35 @@
-# Sample TronBox Project
+# [MyTokenTest] - ERC20 Token Contract
+###### version 1.0
 
-This is a bare-minimum TronBox project.
+## 合约地址
+`TNuMmWUyVv6RmGRXCeHMWLK2w24ZGWCkxK`  
+TronScan测试网合约地址链接： [NILE TESTNET](https://nile.tronscan.org/?_gl=1*t4atnr*_ga*MTg0NTkwMjA1Ny4xNzU1MjYxMDk4*_ga_TBLE5BZDE8*czE3NTU0MzIxODkkbzYkZzAkdDE3NTU0MzIxODkkajYwJGwwJGgw&_ga=2.188252264.1381738422.1755261098-1845902057.1755261098#/token20/TNuMmWUyVv6RmGRXCeHMWLK2w24ZGWCkxK)
 
-## Configuration
+## 代币介绍
+`MyTokenTest`代币(以下简称`MTT`)完全兼容ERC20接口，并拓展了铸币与销币功能  
+### 后续更新
+`MTT`未来拓展：安全铸造控制、交易暂停功能等
 
-Your configuration file is called `tronbox-config.js` and is located at the root of your project directory.
+## 代币基本信息
+|属性|值|
+|---|---|
+|名称|MyTokenTest|
+|符号|MTT|
+|小数位|18|
+|初始分配|100个币|
 
-## Compiling
+### 标准功能
+- ERC20 Standard
+### 拓展功能
+- 铸币功能
+- 销币功能
 
-To compile your contracts, use the following command:
-
-```shell
-tronbox compile
-```
-
-## Migration
-
-The project comes pre-configured with four separate networks:
-
-- Mainnet (https://api.trongrid.io)
-- Shasta Testnet (https://api.shasta.trongrid.io)
-- Nile Testnet (https://nile.trongrid.io).
-- Localnet (http://127.0.0.1:9090)
-
-### Mainnet
-
-To deploy your contracts to Mainnet, you can run the following:
-
-```shell
-tronbox migrate --network mainnet
-```
-
-### Shasta Testnet
-
-Obtain test coin at https://shasta.tronex.io/
-
-To deploy your contracts to Shasta Testnet, you can run the following:
-
-```shell
-tronbox migrate --network shasta
-```
-
-### Nile Testnet
-
-Obtain test coin at https://nileex.io/join/getJoinPage
-
-To deploy your contracts to Nile Testnet, you can run the following:
-
-```shell
-tronbox migrate --network nile
-```
-
-### Localnet
-
-The TronBox Runtime Environment provides a complete development framework for Tron, including a private network for testing.
-
-Get tronbox/tre docker image at https://hub.docker.com/r/tronbox/tre
-
-To deploy your contracts to Localnet, you can run the following:
-
-```shell
-tronbox migrate
-```
-
-## Testing
-
-To test your contracts, you can run the following:
-
-```shell
-tronbox test --network <mainnet|shasta|nile|development>
-```
-
-## Work with EVM
-
-TronBox supports deploying contracts on EVM-compatible blockchains.
-
-For more information, please refer to: https://developers.tron.network/reference/work-with-evm
-
-## Additional Resources
-
-For further learning, visit the official TronBox site at https://tronbox.io
+# 项目结构
+├── contracts  
+│ ├── `IERC20.sol` 定义ERC20标准规范  
+│ ├── `ERC20.sol` 实现核心功能  
+│ └── `MyToken.sol` 部署具体代币  
+├── migrations  
+│ └── `deploy_my_token_contracts.js` 合约部署脚本  
+├── testdoc  
+│ └── `test.md` 测试过程文档
