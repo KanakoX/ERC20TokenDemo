@@ -31,5 +31,7 @@ TronScan测试网合约地址链接： [NILE TESTNET](https://nile.tronscan.org/
 │ └── `MyToken.sol` 部署具体代币  
 ├── migrations  
 │ └── `deploy_my_token_contracts.js` 合约部署脚本  
+├── test  
+│ └── `transferTest.js` transfer函数测试脚本 
 ├── testdoc  
 │ └── `test.md` 测试过程文档
